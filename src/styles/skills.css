@@ -1,0 +1,18 @@
+.background-layer {
+  position: relative;
+  overflow: hidden;
+}
+.background-layer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #ffffff;
+  background-image: repeating-radial-gradient(circle at 0 0, transparent 0, rgba(255,255,255,0.2) 8px),
+    repeating-linear-gradient(rgba(168,167,167,0.3), rgba(168,167,167,0.6));
+  opacity: 0.3;
+  z-index: 0;
+}
+.background-layer > * {
+  position: relative;
+  z-index: 1;
+}

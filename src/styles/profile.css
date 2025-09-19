@@ -1,0 +1,144 @@
+:root {
+  --font-family: "Poppins", sans-serif;
+  --padding: 30px;
+  --padding-mobile: 10px;
+  --font-size-h3: 2.2rem;
+  --font-size-h3-bold: 2.5rem;
+  --font-size-p: 0.9rem;
+  --font-size-type: 3em;
+  --font-size-h3-mobile: 1.5rem;
+  --font-size-type-mobile: 1.5em;
+  --font-size-p-mobile: 0.8rem;
+  --font-color: black;
+}
+
+body {
+  background-color: white;
+  font-family: var(--font-family);
+}
+
+.col-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 40px
+
+}
+
+.social {
+  padding: var(--padding) 0 0 var(--padding);
+}
+
+.left_side {
+  padding: var(--padding) 0 0 var(--padding);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.left_side h3 {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: var(--font-size-h3);
+  margin: 0;
+  color: var(--font-color);
+}
+
+.left_side h3 b {
+  font-weight: 700;
+  font-size: var(--font-size-h3-bold);
+  color: var(--font-color);
+}
+
+.left_side p {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-style: italic;
+  font-size: var(--font-size-p);
+  color: var(--font-color);
+}
+
+.first-part,
+.second-part {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: var(--font-size-type);
+  display: inline-block;
+}
+
+.first-part {
+  color: black;
+}
+
+.second-part {
+  color: white;
+  -webkit-text-stroke: 2px black;
+}
+
+.profile-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: polygon(23% 0, 100% 0, 100% 100%, 0 100%);
+  background-color: black;
+}
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 650px) {
+  .web {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .left_side {
+    padding: var(--padding-mobile);
+  }
+
+  .left_side h3 {
+    font-size: var(--font-size-h3-mobile);
+    color: var(--font-color);
+  }
+
+  .left_side h3 b {
+    font-size: var(--font-size-h3-mobile);
+    color: var(--font-color);
+  }
+
+  .left_side p {
+    font-size: var(--font-size-p-mobile);
+    color: var(--font-color);
+  }
+
+  .first-part,
+  .second-part {
+    font-size: var(--font-size-type-mobile);
+    color: var(--font-color);
+  }
+
+  .social {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .profile-img {
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  }
+
+  .profile-img img {
+    object-fit: contain;
+  }
+}
