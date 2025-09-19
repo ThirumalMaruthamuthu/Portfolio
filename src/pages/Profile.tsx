@@ -4,7 +4,7 @@ import ProfileContent from "./ProfileContent";
 import profile from '../assets/thirumal_bro.jpg';
 import '../styles/profile.css';
 
-const Profile = React.forwardRef<HTMLDivElement>((props, ref) => (
+const Profile = React.forwardRef<HTMLDivElement>((_props, ref) => (
     <div ref={ref}>
         <div className="web">
             <Grid container spacing={1}>
